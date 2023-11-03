@@ -1,0 +1,79 @@
+---
+title: "Questionnaire"
+author: "J. Doe"
+format:
+  dashboard:
+    embed-resources: true
+engine: knitr
+---
+
+```{r}
+#| include: false
+library(ggplot2)
+p <- ggplot() + geom_blank() + theme_dark()
+```
+
+# HMFA (Hierarchical Multiple Factor Analysis)
+
+## Row {height="30%"}
+
+::: {.valuebox icon="calendar-check" color="light"}
+Visit
+
+`{r} "BASELINE"`
+:::
+
+::: {.valuebox icon="bar-chart-line-fill" color="light"}
+Number of participants
+
+`{r} 2000`
+:::
+
+::: {.valuebox icon="bar-chart-line-fill" color="light"}
+Number of participants (SHC complete)
+
+`{r} 1000`
+:::
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+::: {.card title="Variance"}
+```{r}
+p
+```
+:::
+
+::: {.card title="Features"}
+```{r}
+p
+```
+:::
+
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 6
+for (i in 1:2) {
+  cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
+  print(p)
+  cat("\n\n:::\n\n")
+}
+```
+
+### Column {.tabset width="70%"}
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 3
+for (itop in head(letters)) {
+  cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
+  print(p)
+  cat("\n\n:::\n\n")
+}
+```
