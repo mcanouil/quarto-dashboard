@@ -1,0 +1,26 @@
+---
+title: "Cards"
+format:
+  dashboard:
+    orientation: columns
+    embed-resources: true
+---
+
+```{r}
+#| include: false
+library(ggplot2)
+p <- ggplot() + geom_blank() + theme_dark()
+```
+
+::: {.card title="Card 1"}
+```{r}
+p
+```
+:::
+
+```{r}
+#| output: asis
+cat("\n\n::: {.card title='Card 2'}\n\n")
+print(p)
+cat("\n\n:::\n\n")
+```

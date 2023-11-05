@@ -7,11 +7,8 @@ format:
 engine: knitr
 ---
 
-```{r}
-#| include: false
-library(ggplot2)
-p <- ggplot() + geom_blank() + theme_dark()
-```
+
+
 
 # HMFA (Hierarchical Multiple Factor Analysis)
 
