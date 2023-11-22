@@ -60,7 +60,9 @@ p
 #| fig-height: 6
 for (i in 1:2) {
   cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
-  print(p)
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = i))
+  cat("\n\n::::\n\n")
   cat("\n\n:::\n\n")
 }
 ```
@@ -73,7 +75,9 @@ for (i in 1:2) {
 #| fig-height: 3
 for (itop in head(letters)) {
   cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
-  print(p)
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = itop))
+  cat("\n\n::::\n\n")
   cat("\n\n:::\n\n")
 }
 ```
