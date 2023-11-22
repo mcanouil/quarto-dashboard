@@ -1,8 +1,9 @@
 ---
-title: "Questionnaire"
-author: "J. Doe"
+title: "Dashboard"
+author: "Mickaël CANOUIL"
 format:
   dashboard:
+    theme: quartz
     embed-resources: true
 engine: knitr
 ---
@@ -13,14 +14,14 @@ library(ggplot2)
 p <- ggplot() + geom_blank() + theme_dark()
 ```
 
-# HMFA (Hierarchical Multiple Factor Analysis)
+# Page 1
 
 ## Row {height="30%"}
 
 ::: {.valuebox icon="calendar-check" color="light"}
 Visit
 
-`{r} "BASELINE"`
+`{r} "Start"`
 :::
 
 ::: {.valuebox icon="bar-chart-line-fill" color="light"}
@@ -30,7 +31,7 @@ Number of participants
 :::
 
 ::: {.valuebox icon="bar-chart-line-fill" color="light"}
-Number of participants (SHC complete)
+Number of participants (complete)
 
 `{r} 1000`
 :::
@@ -81,3 +82,49 @@ for (itop in head(letters)) {
   cat("\n\n:::\n\n")
 }
 ```
+
+# Page 2
+
+## Row {height="30%"}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+#### Row
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+### Column {.tabset width="70%"}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
